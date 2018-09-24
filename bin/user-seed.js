@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 const User = require("./../models/user-model");
 const bCrypt = require("bcrypt");
@@ -6,7 +8,7 @@ const prompts = require("prompts");
 mongoose.Promise = Promise;
 mongoose
   .connect(
-    "mongodb://localhost/project-showcase-backend",
+    process.env.MONGODB_URI,
     { useMongoClient: true }
   )
   .then(() => {
