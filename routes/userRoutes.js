@@ -2,6 +2,7 @@ const express = require("express");
 const bCrypt = require("bcrypt");
 
 const User = require("../models/user-model");
+const fileUploader = require("../config/file-uploader.js");
 
 const router = express.Router();
 
@@ -45,5 +46,26 @@ router.get("/check-login", (req, res, next) => {
   }
   res.json({ userDoc: req.user });
 });
+
+router.post("/upload-image",
+  fileUploader.single("imageFile"),
+  (req, res, next) => {
+    if (!req.user) {
+      next(new Error("Log in to upload an image"));
+    }
+    else if (!req.file) {
+      next(new Error("No image uploaded"));
+    }
+    else {
+      const { originalname, secure_url, format, width, height } = req.file;
+      res.json({
+        imageName: originalname,
+        imageUrl: secure_url,
+        format,
+        width,
+        height,
+      });
+    }
+  });
 
 module.exports = router;
