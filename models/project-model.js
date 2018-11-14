@@ -10,8 +10,13 @@ const projectSchema = new Schema(
     description: { type: String },
     gitHubUrl: { type: String },
     projectUrl: { type: String, required: true },
-    podiumPosition: { type: String },
-    techStack: [{ type: String }]
+    tools: [{ type: String }],
+    likes: {type: Number},
+    linkedInUrl: {type:String},
+    projectCredentials: [ {type: String, maxlength: 2}],
+    display: {type: String, enum: ["mobile", "web"]},
+    bootcamp: {type: String, enum: ["Web Dev Full Time", "Web Dev Part Time", "UX/UI Part Time", "UX/UI Full Time", "Data Analytics" ]},
+    squad: {type: String}
   },
   {
     timestamps: true
