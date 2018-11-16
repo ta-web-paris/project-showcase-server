@@ -13,7 +13,7 @@ const projectSchema = new Schema(
     tools: [{ type: String }],
     likes: {type: Number},
     linkedInUrl: {type:String},
-    projectCredentials: [ {type: String, maxlength: 2}],
+    projectCredentials: [ {type: String}],
     display: {type: String, enum: ["mobile", "web"]},
     bootcamp: {type: String, enum: ["Web Dev Full Time", "Web Dev Part Time", "UX/UI Part Time", "UX/UI Full Time", "Data Analytics" ]},
     squad: {type: String}

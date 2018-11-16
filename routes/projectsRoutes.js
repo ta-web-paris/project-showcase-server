@@ -4,23 +4,11 @@ const Project = require("../models/project-model.js");
 
 router.post("/projects", (req, res, next) => {
   const {
-    name,
-    creators,
-    screenshotUrl,
-    description,
-    gitHubUrl,
-    projectUrl,
-    techStack
+    ...fields
   } = req.body;
 
   Project.create({
-    name,
-    creators,
-    screenshotUrl,
-    description,
-    gitHubUrl,
-    projectUrl,
-    techStack
+    ...fields
   })
     .then(projectDoc => {
       res.json(projectDoc);
@@ -51,25 +39,13 @@ router.delete("/projects/:id", (req, res, next) => {
 router.put("/projects/:id", (req, res, next) => {
   const { id } = req.params;
   const {
-    name,
-    creators,
-    screenshotUrl,
-    description,
-    gitHubUrl,
-    projectUrl,
-    techStack
+    ...fields
   } = req.body;
 
   Project.findByIdAndUpdate(
     id,
     {
-      name,
-      creators,
-      screenshotUrl,
-      description,
-      gitHubUrl,
-      projectUrl,
-      techStack
+    ...fields
     },
     { runValidators: true, new: true }
   )
