@@ -7,15 +7,15 @@ const Schema = mongoose.Schema;
 const projectSchema = new Schema(
   {
     name: { type: String, required: true, algoliaIndex: true },
-    creators: [{ type: String, required: true, algoliaIndex: true }],
+    creators: { type: Array, required: true, algoliaIndex: true },
     screenshotUrl: { type: String, algoliaIndex: true },
     description: { type: String, algoliaIndex: true },
     gitHubUrl: { type: String, algoliaIndex: true },
     projectUrl: { type: String, required: true, algoliaIndex: true },
-    tools: [{ type: String, algoliaIndex: true }],
+    tools: { type: Array, algoliaIndex: true },
     likes: { type: Number, algoliaIndex: true },
     linkedInUrl: { type: String, algoliaIndex: true },
-    projectCredentials: [{ type: String, algoliaIndex: true }],
+    projectCredentials: { type: Array, algoliaIndex: true },
     display: { type: String, enum: ["mobile", "web"], algoliaIndex: true },
     bootcamp: {
       type: String,
