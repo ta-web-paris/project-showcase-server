@@ -12,6 +12,7 @@ const projectSchema = new Schema(
       }
     ],
     screenshotUrl: { type: String },
+    projectType: {type: String, enum: ["App","Website","Mobile Website", "Front-End", "Full-Stack", "UX", "UX/UI", "UI" ]},
     description: { type: String },
     gitHubUrl: { type: String },
     projectUrl: { type: String, required: true },
