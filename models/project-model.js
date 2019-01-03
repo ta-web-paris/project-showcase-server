@@ -1,32 +1,47 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
+const mongoolia = require("mongoolia").default;
 
 const Schema = mongoose.Schema;
 
 const projectSchema = new Schema(
   {
-    name: { type: String, required: true },
-    creators: [
-      { 
-        name : {type: String, required: true},
-        linkedInUrl: {type: String}
-      }
-    ],
-    screenshotUrl: { type: String },
-    projectType: {type: String, enum: ["App","Website","Mobile Website", "Front-End", "Full-Stack", "UX", "UX/UI", "UI" ]},
-    description: { type: String },
-    gitHubUrl: { type: String },
-    projectUrl: { type: String, required: true },
-    tools: [{ type: String }],
-    likes: {type: Number},
-    projectCredentials: [ {type: String}],
-    display: {type: String, enum: ["mobile", "web"]},
-    bootcamp: {type: String, enum: ["Web Dev Full Time", "Web Dev Part Time", "UX/UI Part Time", "UX/UI Full Time", "Data Analytics" ]},
-    squad: {type: String}
+
+    name: { type: String, required: true, algoliaIndex: true },
+    creators: { type: Array, required: true, algoliaIndex: true },
+    screenshotUrl: { type: String, algoliaIndex: true },
+    description: { type: String, algoliaIndex: true },
+    gitHubUrl: { type: String, algoliaIndex: true },
+    projectUrl: { type: String, required: true, algoliaIndex: true },
+    tools: { type: Array, algoliaIndex: true },
+    likes: { type: Number, algoliaIndex: true },
+    linkedInUrl: { type: String, algoliaIndex: true },
+    projectCredentials: { type: Array, algoliaIndex: true },
+    display: { type: String, enum: ["mobile", "web"], algoliaIndex: true },
+    bootcamp: {
+      type: String,
+      enum: [
+        "Web Dev Full Time",
+        "Web Dev Part Time",
+        "UX/UI Part Time",
+        "UX/UI Full Time",
+        "Data Analytics"
+      ],
+      algoliaIndex: true
+    },
+    squad: { type: String, algoliaIndex: true }
+ 
   },
   {
     timestamps: true
   }
 );
+
+projectSchema.plugin(mongoolia, {
+  appId: process.env.ALGOLIA_APP_ID,
+  apiKey: process.env.ALGOLIA_ADMIN_KEY,
+  indexName: "search_data"
+});
 
 const Project = mongoose.model("Project", projectSchema);
 
