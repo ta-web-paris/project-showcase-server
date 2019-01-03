@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema(
   {
+
     name: { type: String, required: true, algoliaIndex: true },
     creators: { type: Array, required: true, algoliaIndex: true },
     screenshotUrl: { type: String, algoliaIndex: true },
@@ -29,6 +30,7 @@ const projectSchema = new Schema(
       algoliaIndex: true
     },
     squad: { type: String, algoliaIndex: true }
+ 
   },
   {
     timestamps: true
