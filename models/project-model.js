@@ -6,7 +6,6 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema(
   {
-
     name: { type: String, required: true, algoliaIndex: true },
     creators: { type: Array, required: true, algoliaIndex: true },
     screenshotUrl: { type: String, algoliaIndex: true },
@@ -17,7 +16,6 @@ const projectSchema = new Schema(
     likes: { type: Number, algoliaIndex: true },
     linkedInUrl: { type: String, algoliaIndex: true },
     projectCredentials: { type: Array, algoliaIndex: true },
-    display: { type: String, enum: ["mobile", "web"], algoliaIndex: true },
     bootcamp: {
       type: String,
       enum: [
@@ -29,9 +27,23 @@ const projectSchema = new Schema(
       ],
       algoliaIndex: true
     },
+    display: { type: String, enum: ["mobile", "web"], algoliaIndex: true },
+    projectType: {
+      type: String,
+      enum: [
+        "fullstack",
+        "fullstack - framework",
+        "front-end",
+        "UX",
+        "UI",
+        "UX/UX",
+        "data"
+      ],
+      algoliaIndex: true
+    },
     squad: { type: String, algoliaIndex: true }
- 
   },
+
   {
     timestamps: true
   }
