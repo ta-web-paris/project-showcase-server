@@ -29,7 +29,7 @@ const projects = [
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
     projectUrl: "http://pairs-in-paris.herokuapp.com/",
-    projectType: "fullstack - framework",
+    projectType: "fullstack",
     display: "web",
     tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
     likes: 56,
