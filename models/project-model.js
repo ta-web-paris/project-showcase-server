@@ -36,7 +36,7 @@ const projectSchema = new Schema(
         "front-end",
         "UX",
         "UI",
-        "UX/UX",
+        "UX/UI",
         "data"
       ],
       algoliaIndex: true
