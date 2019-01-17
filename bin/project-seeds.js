@@ -35,6 +35,7 @@ const projects = [
     likes: 56,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
+    verified: "notverified",
     squad: "#111 - August 18"
   },
   {
@@ -64,6 +65,7 @@ const projects = [
     likes: 60,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
+    verified: "verified",
     squad: "#121 - March 18"
   },
   {
@@ -93,6 +95,7 @@ const projects = [
     likes: 32,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
+    verified: "verified",
     squad: "#111 - August 18"
   },
   {
@@ -115,6 +118,7 @@ const projects = [
     likes: 87,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Part Time",
+    verified: "notverified",
     squad: "#111 - August 18"
   },
   {
@@ -136,6 +140,7 @@ const projects = [
     likes: 13,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "UX/UI Part Time",
+    verified: "verified",
     squad: "#51 - May 17"
   },
   {
@@ -157,6 +162,7 @@ const projects = [
     likes: 13,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "UX/UI Part Time",
+    verified: "notverified",
     squad: "#101 - October 18"
   },
   {
@@ -179,6 +185,7 @@ const projects = [
     likes: 71,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
+    verified: "verified",
     squad: "#119 - May 19"
   },
   {
@@ -201,6 +208,7 @@ const projects = [
     likes: 83,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
+    verified: "verified",
     squad: "#61 - March 17"
   },
   {
@@ -227,6 +235,7 @@ const projects = [
     likes: 14,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
+    verified: "verified",
     squad: "#111 - August 18"
   }
 ];
