@@ -24,7 +24,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/paul-abarnou-1b389080/"
       }
     ],
-    screenshotUrl: "http://pairs-in-paris.herokuapp.com/images/Logo-Pairs.png",
+    screenshotUrl: "https://www.thoughtco.com/thmb/fkB7M4niWhKwstAaCDgbu_vEBEY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg",
     description:
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
@@ -126,7 +126,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://lh3.googleusercontent.com/z0gMa0aRAkLxjS-lVaSOO1Ygb48rttOcR5iRpgJPTM6_enkfeCuN37JWm_9qcHJaJw",
+      "https://www.vu-du-web.com/wp-content/uploads/2014/02/1657806-1024x576.jpg",
     description: "Twitter is a social platform where you can post stuff on",
     gitHubUrl: "https://github.com/twitterofgithub",
     projectUrl: "http://twiwiter.herokuapp.com/",
@@ -146,7 +146,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
       }
     ],
-    screenshotUrl: "https://i.ytimg.com/vi/OEGm7LXAN_c/maxresdefault.jpg",
+    screenshotUrl: "https://github.githubassets.com/images/modules/explore/social.jpg",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/twitterofgithub",
@@ -168,7 +168,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://pbs.twimg.com/profile_images/1031555260911939586/e01tx3UC_400x400.jpg",
+      "https://wydden.com/wp-content/uploads/2018/10/EVENTBRITE_1-FINAL.png",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/twitterofgithub",
@@ -190,7 +190,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://pbs.twimg.com/profile_images/1031555260911939586/e01tx3UC_400x400.jpg",
+      "https://www.thegatewayonline.ca/wp-content/uploads/2017/01/Arts-Supplied-The-Founder-Movie-Review.jpg",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/twitterofgithub",
@@ -216,7 +216,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://pbs.twimg.com/profile_images/1031555260911939586/e01tx3UC_400x400.jpg",
+      "https://dyw7ncnq1en5l.cloudfront.net/optim/news/71/71319/1_amazon.jpg",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/twitterofgithub",
