@@ -41,6 +41,11 @@ const projectSchema = new Schema(
       ],
       algoliaIndex: true
     },
+    verified: {
+      type: String,
+      enum: ["verified", "notverified"],
+      default: "notverified"
+    },
     squad: { type: String, algoliaIndex: true }
   },
 
