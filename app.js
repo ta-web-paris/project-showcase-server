@@ -36,10 +36,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-app.use(cors({
-  credentials: true,
-  origin: process.env.CLIENT_URL,
-}));
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.CLIENT_URL
+  })
+);
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -55,5 +57,8 @@ app.use("/api", userRouter);
 
 const projectRouter = require("./routes/projectsRoutes");
 app.use("/api", projectRouter);
+
+const adminRouter = require("./routes/adminRoutes");
+app.use("/api", adminRouter);
 
 module.exports = app;
