@@ -3,6 +3,8 @@ const router = express.Router();
 
 const Project = require("../models/project-model");
 
+//------------ DISPLAY PROJECTS -----------------
+
 router.get("/verified", (req, res, next) => {
   Project.find({ verified: { $eq: "verified" } })
     .then(projectArr => res.json(projectArr))
@@ -13,6 +15,15 @@ router.get("/notverified", (req, res, next) => {
   Project.find({ verified: { $eq: "notverified" } })
     .then(projectArr => res.json(projectArr))
     .catch(next);
+});
+
+//---------------- EDIT A PROJECT ------------
+
+router.put("/notverified/:id", (req, res, next) => {
+  const { id } = req.params;
+  Project.findByIdAndUpdate(id, { runValidators: true })
+    .then(projectDetails => res.json(projectDetails))
+    .catch(err => next(err));
 });
 
 module.exports = router;
