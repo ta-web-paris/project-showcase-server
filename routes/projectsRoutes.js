@@ -3,14 +3,14 @@ const router = express.Router();
 const Project = require("../models/project-model.js");
 
 router.post("/projects", (req, res, next) => {
-  const {...fields} = req.body;
+  const { ...fields } = req.body;
 
-  Project.create({...fields})
+  Project.create({ ...fields })
     .then(projectDoc => res.json(projectDoc))
     .catch(next);
 });
 
-router.get("/projects", (req, res, next) => {
+router.get("/", (req, res, next) => {
   Project.find()
     .then(projectsArr => res.json(projectsArr))
     .catch(next);
@@ -32,11 +32,11 @@ router.delete("/projects/:id", (req, res, next) => {
 
 router.put("/projects/:id", (req, res, next) => {
   const { id } = req.params;
-  const {...fields} = req.body;
+  const { ...fields } = req.body;
 
   Project.findByIdAndUpdate(
     id,
-    { ...fields},
+    { ...fields },
     { runValidators: true, new: true }
   )
     .then(projectDoc => res.json(projectDoc))
