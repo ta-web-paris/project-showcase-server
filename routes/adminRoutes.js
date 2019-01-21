@@ -21,7 +21,12 @@ router.get("/notverified", (req, res, next) => {
 
 router.put("/notverified/:id", (req, res, next) => {
   const { id } = req.params;
-  Project.findByIdAndUpdate(id, { runValidators: true })
+  const { ...fields } = req.body;
+  Project.findByIdAndUpdate(
+    id,
+    { ...fields },
+    { runValidators: true, new: true }
+  )
     .then(projectDetails => res.json(projectDetails))
     .catch(err => next(err));
 });
