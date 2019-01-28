@@ -2,6 +2,18 @@ const express = require("express");
 const router = express.Router();
 const Project = require("../models/project-model.js");
 
+//---------------- ALL PROJECTS -------------
+
+router.get("/", (req, res, next) => {
+  Project.find()
+    .then(projectsArr => {
+      res.json(projectsArr);
+      // console.log("project array", projectsArr);
+    })
+    .catch(next);
+});
+
+// --------------- CREATE A PROJECT ----------
 router.post("/projects", (req, res, next) => {
   const { ...fields } = req.body;
 
@@ -10,18 +22,17 @@ router.post("/projects", (req, res, next) => {
     .catch(next);
 });
 
-router.get("/", (req, res, next) => {
-  Project.find()
-    .then(projectsArr => res.json(projectsArr))
-    .catch(next);
-});
+// ------------- PROJECT DETAIL PAGE -----------------
 
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
+  console.log(id, "hoho");
   Project.findById(id)
     .then(projectDoc => res.json(projectDoc))
     .catch(next);
 });
+
+//-------------- DELETE A PROJECT ---------------
 
 router.delete("/projects/:id", (req, res, next) => {
   const { id } = req.params;
@@ -29,6 +40,8 @@ router.delete("/projects/:id", (req, res, next) => {
     .then(projectDoc => res.json(projectDoc))
     .catch(next);
 });
+
+//--------------- UPDATE A PROJECT -----------
 
 router.put("/projects/:id", (req, res, next) => {
   const { id } = req.params;
