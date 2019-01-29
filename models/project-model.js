@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema(
   {
+    searchId: { type: Number, algoliaIndex: true },
     name: { type: String, required: true, algoliaIndex: true },
     creators: { type: Array, required: true, algoliaIndex: true },
     screenshotUrl: { type: String, algoliaIndex: true },

@@ -24,7 +24,8 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/paul-abarnou-1b389080/"
       }
     ],
-    screenshotUrl: "https://www.thoughtco.com/thmb/fkB7M4niWhKwstAaCDgbu_vEBEY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg",
+    screenshotUrl:
+      "https://www.thoughtco.com/thmb/fkB7M4niWhKwstAaCDgbu_vEBEY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg",
     description:
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
@@ -36,6 +37,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "notverified",
+    searchId: "01",
     squad: "#111 - August 18"
   },
   {
@@ -66,6 +68,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "verified",
+    searchId: "02",
     squad: "#121 - March 18"
   },
   {
@@ -96,6 +99,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "verified",
+    searchId: "03",
     squad: "#111 - August 18"
   },
   {
@@ -119,6 +123,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Part Time",
     verified: "notverified",
+    searchId: "04",
     squad: "#111 - August 18"
   },
   {
@@ -141,6 +146,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "UX/UI Part Time",
     verified: "verified",
+    searchId: "05",
     squad: "#51 - May 17"
   },
   {
@@ -151,7 +157,8 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
       }
     ],
-    screenshotUrl: "https://github.githubassets.com/images/modules/explore/social.jpg",
+    screenshotUrl:
+      "https://github.githubassets.com/images/modules/explore/social.jpg",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/twitterofgithub",
@@ -163,6 +170,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "UX/UI Part Time",
     verified: "notverified",
+    searchId: "06",
     squad: "#101 - October 18"
   },
   {
@@ -186,6 +194,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
     verified: "verified",
+    searchId: "07",
     squad: "#119 - May 19"
   },
   {
@@ -209,6 +218,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
     verified: "verified",
+    searchId: "08",
     squad: "#61 - March 17"
   },
   {
@@ -236,6 +246,7 @@ const projects = [
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Data Analytics",
     verified: "verified",
+    searchId: "09",
     squad: "#111 - August 18"
   }
 ];

@@ -18,7 +18,9 @@ router.post("/projects", (req, res, next) => {
   const { ...fields } = req.body;
 
   Project.create({ ...fields })
-    .then(projectDoc => res.json(projectDoc))
+    .then(projectDoc => {
+      res.json(projectDoc);
+    })
     .catch(next);
 });
 
@@ -26,11 +28,28 @@ router.post("/projects", (req, res, next) => {
 
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
-  console.log(id, "hoho");
-  Project.findById(id)
-    .then(projectDoc => res.json(projectDoc))
+
+  console.log(id);
+  Project.find({ searchId: { $eq: id } })
+    .then(projectDoc => {
+      res.json(projectDoc);
+    })
     .catch(next);
+
+  // const { id } = req.params;
+  // console.log(id, "hoho");
+  // Project.findById(id)
+  //   .then(projectDoc => res.json(projectDoc))
+  //   .catch(next);
 });
+
+// router.get("/projects/:id", (req, res, next) => {
+//   const { id } = req.params;
+//   console.log(id, "hoho");
+//   Project.findById(id)
+//     .then(projectDoc => res.json(projectDoc))
+//     .catch(next);
+// });
 
 //-------------- DELETE A PROJECT ---------------
 
@@ -43,8 +62,10 @@ router.delete("/projects/:id", (req, res, next) => {
 
 //--------------- UPDATE A PROJECT -----------
 
-router.put("/projects/:id", (req, res, next) => {
+router.put("/projects/edit/:id", (req, res, next) => {
   const { id } = req.params;
+
+  console.log(id);
   const { ...fields } = req.body;
 
   Project.findByIdAndUpdate(
