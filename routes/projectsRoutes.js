@@ -29,7 +29,6 @@ router.post("/projects", (req, res, next) => {
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
 
-  console.log(id);
   Project.find({ searchId: { $eq: id } })
     .then(projectDoc => {
       res.json(projectDoc);
@@ -61,6 +60,18 @@ router.delete("/projects/:id", (req, res, next) => {
 });
 
 //--------------- UPDATE A PROJECT -----------
+
+router.get("/projects/edit/:id", (req, res, next) => {
+  const { id } = req.params;
+  console.log(req.pa, "gogogogoggogogog");
+
+  Project.findById(id)
+    .then(projectDoc => {
+      console.log(projectDoc);
+      res.json(projectDoc);
+    })
+    .catch(next);
+});
 
 router.put("/projects/edit/:id", (req, res, next) => {
   const { id } = req.params;
