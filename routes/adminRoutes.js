@@ -17,18 +17,42 @@ router.get("/notverified", (req, res, next) => {
     .catch(next);
 });
 
-//---------------- EDIT A PROJECT ------------
+//-------------- DELETE A PROJECT ---------------
 
-router.put("/notverified/:id", (req, res, next) => {
+router.delete("/projects/:id", (req, res, next) => {
   const { id } = req.params;
+  Project.findByIdAndRemove(id)
+    .then(projectDoc => res.json(projectDoc))
+    .catch(next);
+});
+
+//--------------- UPDATE A PROJECT -----------
+
+router.get("/projects/edit/:id", (req, res, next) => {
+  const { id } = req.params;
+  console.log(req.pa, "gogogogoggogogog");
+
+  Project.findById(id)
+    .then(projectDoc => {
+      // console.log(projectDoc);
+      res.json(projectDoc);
+    })
+    .catch(next);
+});
+
+router.put("/projects/edit/:id", (req, res, next) => {
+  const { id } = req.params;
+
+  // console.log(id);
   const { ...fields } = req.body;
+
   Project.findByIdAndUpdate(
     id,
     { ...fields },
     { runValidators: true, new: true }
   )
-    .then(projectDetails => res.json(projectDetails))
-    .catch(err => next(err));
+    .then(projectDoc => res.json(projectDoc))
+    .catch(next);
 });
 
 module.exports = router;
