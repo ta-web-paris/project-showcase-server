@@ -2,10 +2,7 @@ const mongoose = require("mongoose");
 const Project = require("../models/project-model.js");
 
 mongoose
-  .connect(
-    process.env.MONGODB_URI,
-    { useNewUrlParser: true }
-  )
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -30,224 +27,262 @@ const projects = [
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
     projectUrl: "http://pairs-in-paris.herokuapp.com/",
-    projectType: "fullstack",
+    projectType: "fullstack - framework",
     display: "web",
     tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 56,
+    likes: 0,
     projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "notverified",
     searchId: "01",
-    squad: "#111 - August 18"
+    squad: "#84"
   },
   {
-    name: "Custom React App",
+    name: "Guess Who Game",
     creators: [
       {
-        name: "Mohammed Zamama",
-        linkedInUrl: "https://www.linkedin.com/in/mohammed-1b389080/"
-      },
-      {
-        name: "Emmanuelle Jaldoreau",
-        linkedInUrl: "https://www.linkedin.com/in/mohammed-1b389080/"
-      },
-      {
-        name: "Pauline Brothier",
-        linkedInUrl: "https://www.linkedin.com/in/mohammed-1b389080/"
+        name: "Laura Stromboni",
+        linkedInUrl: "https://www.linkedin.com/in/laurastromboni/"
       }
     ],
     screenshotUrl: "http://www.rudebaguette.com/assets/ecommerce-12.jpg",
     description:
-      "Custom React App is an e-commerce platform that you can manage on Wordpress and developped with React",
-    gitHubUrl: "https://github.com/MomoPauletteEmmanuelle",
-    projectUrl: "http://customreactapp.herokuapp.com/",
-    projectType: "fullstack",
+      "Let’s play to this traditional game where you have to find a hidden character among 25.",
+    gitHubUrl: "https://github.com/laurastromboni/guesswho",
+    projectUrl: "https://laurastromboni.github.io/guesswho/",
+    projectType: "front-end",
     display: "web",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 60,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    tools: ["JavaScript", "HTML", "CSS"],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "02",
-    squad: "#121 - March 18"
+    squad: "#99"
   },
   {
-    name: "Facebook",
+    name: "O’Vino",
     creators: [
       {
-        name: "Marie Gilier",
-        linkedInUrl: "https://www.linkedin.com/in/marie-gillier/"
+        name: "Laura Stromboni",
+        linkedInUrl: "https://www.linkedin.com/in/laurastromboni/"
       },
       {
-        name: "Paul Abarnou",
-        linkedInUrl: "https://www.linkedin.com/in/paul-abarnou-1b389080/"
+        name: "Geoffroy Baghdassarian",
+        linkedInUrl: "https://www.linkedin.com/in/geoffroy-baghdassarian/"
+      }
+    ],
+    screenshotUrl:
+      "https://i.kinja-img.com/gawker-media/image/upload/s--8mfRXFFg--/c_scale,f_auto,fl_progressive,q_80,w_800/lerhtnwejopgb63yvs8m.jpg",
+    description:
+      "Food and wine pairing delivery application, w/ advice & social services.",
+    gitHubUrl: "https://github.com/geoffroybag/ovino",
+    projectUrl: "http://ovino.herokuapp.com/",
+    projectType: "fullstack",
+    display: "mobile",
+    tools: [
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "HBS",
+      "JavaScript",
+      "Mongoose",
+      "SASS"
+    ],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
+    verified: "verified",
+    searchId: "03",
+    squad: "#99"
+  },
+  {
+    name: "Airbnb Clone",
+    creators: [
+      {
+        name: "Laura Stromboni",
+        linkedInUrl: "https://www.linkedin.com/in/laurastromboni/"
       },
+      {
+        name: "Geoffroy Baghdassarian",
+        linkedInUrl: "https://www.linkedin.com/in/geoffroy-baghdassarian/"
+      },
+      {
+        name: "Mathis Peingnez",
+        linkedInUrl: "https://www.linkedin.com/in/mathispnz/"
+      }
+    ],
+    screenshotUrl:
+      "https://lh3.googleusercontent.com/z0gMa0aRAkLxjS-lVaSOO1Ygb48rttOcR5iRpgJPTM6_enkfeCuN37JWm_9qcHJaJw",
+    description: "A clone of Airbnb",
+    gitHubUrl: "https://github.com/laurastromboni/airbnb-clone",
+    projectUrl: "http://iron-airbnb.herokuapp.com/",
+    projectType: "fullstack - framework",
+    display: "web",
+
+    tools: [
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "SASS",
+      "JavaScript",
+      "Bootstrap",
+      "socket.io"
+    ],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
+    verified: "verified",
+    searchId: "04",
+    squad: "#99"
+  },
+  {
+    name: "Tap Tap Revolution",
+    creators: [
       {
         name: "Abi Summers",
         linkedInUrl: "https://www.linkedin.com/in/abisummers/"
       }
     ],
     screenshotUrl:
-      "https://i.kinja-img.com/gawker-media/image/upload/s--8mfRXFFg--/c_scale,f_auto,fl_progressive,q_80,w_800/lerhtnwejopgb63yvs8m.jpg",
-    description: "Facebook is a social platform that connects the world",
-    gitHubUrl: "https://github.com/PaulAbarnou37",
-    projectUrl: "https://facebooook.herokuapp.com/",
+      "https://www.vu-du-web.com/wp-content/uploads/2014/02/1657806-1024x576.jpg",
+    description: "A game based on dance dance revolution",
+    gitHubUrl: "https://github.com/abisummers",
+    projectUrl: "http://abisummers.com/project-one",
     projectType: "front-end",
-    display: "mobile",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 32,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    display: "web",
+    tools: ["JavaScript", "HTML", "CSS"],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
     bootcamp: "Web Dev Full Time",
     verified: "verified",
-    searchId: "03",
-    squad: "#111 - August 18"
-  },
-  {
-    name: "LinkedIn",
-    creators: [
-      {
-        name: "Nizar Khalife",
-        linkedInUrl: "https://www.linkedin.com/in/nizarr-1b389080/"
-      }
-    ],
-    screenshotUrl:
-      "https://lh3.googleusercontent.com/z0gMa0aRAkLxjS-lVaSOO1Ygb48rttOcR5iRpgJPTM6_enkfeCuN37JWm_9qcHJaJw",
-    description:
-      "Custom React App is an e-commerce platform that you can manage on Wordpress and developped with React",
-    gitHubUrl: "https://github.com/nizarkhalife",
-    projectUrl: "http://nizarrrrrr.herokuapp.com/",
-    projectType: "fullstack",
-    display: "web",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 87,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "Web Dev Part Time",
-    verified: "notverified",
-    searchId: "04",
-    squad: "#111 - August 18"
-  },
-  {
-    name: "Twitter",
-    creators: [
-      {
-        name: "Maya Despretz",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
-      }
-    ],
-    screenshotUrl:
-      "https://www.vu-du-web.com/wp-content/uploads/2014/02/1657806-1024x576.jpg",
-    description: "Twitter is a social platform where you can post stuff on",
-    gitHubUrl: "https://github.com/twitterofgithub",
-    projectUrl: "http://twiwiter.herokuapp.com/",
-    projectType: "UX",
-    display: "web",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 13,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "UX/UI Part Time",
-    verified: "verified",
     searchId: "05",
-    squad: "#51 - May 17"
+    squad: "#83"
   },
   {
-    name: "Github",
+    name: "Ironhack Sharer",
     creators: [
       {
-        name: "Guy Theub",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
+        name: "Abi Summers",
+        linkedInUrl: "https://www.linkedin.com/in/abisummers"
+      },
+      {
+        name: "Emmanuelle Jaldorau",
+        linkedInUrl: "https://www.linkedin.com/in/ejaldorau/"
       }
     ],
     screenshotUrl:
       "https://github.githubassets.com/images/modules/explore/social.jpg",
     description:
-      "Github is platform for developpers to collaborate and share blahblah",
-    gitHubUrl: "https://github.com/twitterofgithub",
-    projectUrl: "http://twiwiter.herokuapp.com/",
-    projectType: "UI",
+      "A platform to allow ironhack students to share projects and ideas",
+    gitHubUrl: "https://github.com/abisummers/project-two",
+    projectUrl: "https://ironhack-sharer.herokuapp.com/",
+    projectType: "fullstack",
     display: "web",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 13,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "UX/UI Part Time",
-    verified: "notverified",
+    tools: [
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "HBS",
+      "JavaScript",
+      "Mongoose"
+    ],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
+    verified: "verified",
     searchId: "06",
-    squad: "#101 - October 18"
+    squad: "#83"
   },
   {
-    name: "IronHack",
+    name: "Recyclez-moi",
     creators: [
       {
-        name: "Aillero Nack",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
+        name: "Abi Summers",
+        linkedInUrl: "https://www.linkedin.com/in/abisummers"
+      },
+      {
+        name: "Abi Summers",
+        linkedInUrl: "https://www.linkedin.com/in/abisummers"
+      },
+      {
+        name: "Abi Summers",
+        linkedInUrl: "https://www.linkedin.com/in/abisummers"
       }
     ],
     screenshotUrl:
       "https://wydden.com/wp-content/uploads/2018/10/EVENTBRITE_1-FINAL.png",
-    description:
-      "Github is platform for developpers to collaborate and share blahblah",
-    gitHubUrl: "https://github.com/twitterofgithub",
-    projectUrl: "http://ironhacck.herokuapp.com/",
-    projectType: "front-end",
-    display: "mobile",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 71,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "Data Analytics",
+    description: "Know how to recycle your trash!",
+    gitHubUrl: "https://github.com/abisummers/recycle-react",
+    projectUrl: "http://www.recyclez-moi.co/",
+    projectType: "fullstack - framework",
+    display: "web",
+    tools: [
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "SASS",
+      "JavaScript"
+    ],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "07",
-    squad: "#119 - May 19"
+    squad: "#83"
   },
   {
-    name: "Crapfounder",
+    name: "Is This Art?",
     creators: [
       {
-        name: "John Dimitroff",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
+        name: "Chloé Hipeau-Disko",
+        linkedInUrl: "https://www.linkedin.com/in/chloehd/"
       }
     ],
     screenshotUrl:
       "https://www.thegatewayonline.ca/wp-content/uploads/2017/01/Arts-Supplied-The-Founder-Movie-Review.jpg",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
-    gitHubUrl: "https://github.com/twitterofgithub",
-    projectUrl: "http://ironhacck.herokuapp.com/",
-    projectType: "data",
-    display: "mobile",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
-    likes: 83,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "Data Analytics",
+    gitHubUrl: "https://github.com/chloehd/IsThisArt",
+    projectUrl: "https://chloehd.github.io/IsThisArt/",
+    projectType: "front-end",
+    display: "web",
+    tools: ["JavaScript", "CSS", "HTML"],
+    likes: 0,
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "08",
-    squad: "#61 - March 17"
+    squad: "#99"
   },
   {
-    name: "Amazon",
+    name: "SZNal",
     creators: [
       {
-        name: "Jeff Bezos",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
+        name: "Chloé Hipeau-Disko",
+        linkedInUrl: "https://www.linkedin.com/in/chloehd/"
       },
       {
-        name: "Paul Abarnou",
-        linkedInUrl: "https://www.linkedin.com/in/hey-1b389080/"
+        name: "Helen Woldu",
+        linkedInUrl: "https://www.linkedin.com/in/helen-woldu/"
       }
     ],
     screenshotUrl:
       "https://dyw7ncnq1en5l.cloudfront.net/optim/news/71/71319/1_amazon.jpg",
-    description:
-      "Github is platform for developpers to collaborate and share blahblah",
-    gitHubUrl: "https://github.com/twitterofgithub",
-    projectUrl: "http://ironhacck.herokuapp.com/",
-    projectType: "data",
-    display: "mobile",
-    tools: ["MongoDB", "Node.js", "Express.js", "React.js"],
+    description: "Learn about seasonal foods!",
+    gitHubUrl: "https://github.com/hwoldu/IronhackProject2",
+    projectUrl: "https://szn-recipes.herokuapp.com/",
+    projectType: "fullstack",
+    display: "web",
+    tools: ["MongoDB", "Node.js", "Express.js"],
     likes: 14,
-    projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
-    bootcamp: "Data Analytics",
+    // projectCredentials: ["p.abarnou38@gmail.com", "hey123"],
+    bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "09",
-    squad: "#111 - August 18"
+    squad: "#99"
   }
 ];
 
