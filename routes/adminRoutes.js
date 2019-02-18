@@ -30,11 +30,9 @@ router.delete("/projects/:id", (req, res, next) => {
 
 router.get("/projects/edit/:id", (req, res, next) => {
   const { id } = req.params;
-  console.log(req.pa, "gogogogoggogogog");
 
   Project.findById(id)
     .then(projectDoc => {
-      // console.log(projectDoc);
       res.json(projectDoc);
     })
     .catch(next);
@@ -42,8 +40,6 @@ router.get("/projects/edit/:id", (req, res, next) => {
 
 router.put("/projects/edit/:id", (req, res, next) => {
   const { id } = req.params;
-
-  // console.log(id);
   const { ...fields } = req.body;
 
   Project.findByIdAndUpdate(
