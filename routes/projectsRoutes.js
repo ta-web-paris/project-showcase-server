@@ -8,7 +8,6 @@ router.get("/", (req, res, next) => {
   Project.find()
     .then(projectsArr => {
       res.json(projectsArr);
-      // console.log("project array", projectsArr);
     })
     .catch(next);
 });
@@ -29,25 +28,13 @@ router.post("/projects", (req, res, next) => {
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
 
-  Project.find({ searchId: { $eq: id } })
+  Project.findOne({ searchId: { $eq: id } })
     .then(projectDoc => {
       res.json(projectDoc);
     })
     .catch(next);
-
-  // const { id } = req.params;
-  // console.log(id, "hoho");
-  // Project.findById(id)
-  //   .then(projectDoc => res.json(projectDoc))
-  //   .catch(next);
 });
 
-// router.get("/projects/:id", (req, res, next) => {
-//   const { id } = req.params;
-//   console.log(id, "hoho");
-//   Project.findById(id)
-//     .then(projectDoc => res.json(projectDoc))
-//     .catch(next);
-// });
+//----------- more projects by this creator
 
 module.exports = router;
