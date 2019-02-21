@@ -45,7 +45,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/laurastromboni/"
       }
     ],
-    screenshotUrl: "http://www.rudebaguette.com/assets/ecommerce-12.jpg",
+    screenshotUrl: "/images/Guesswho.png",
     description:
       "Let’s play to this traditional game where you have to find a hidden character among 25.",
     gitHubUrl: "https://github.com/laurastromboni/guesswho",
@@ -73,7 +73,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://i.kinja-img.com/gawker-media/image/upload/s--8mfRXFFg--/c_scale,f_auto,fl_progressive,q_80,w_800/lerhtnwejopgb63yvs8m.jpg",
+      "/images/Ovino.png",
     description:
       "Food and wine pairing delivery application, w/ advice & social services.",
     gitHubUrl: "https://github.com/geoffroybag/ovino",
@@ -113,7 +113,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://lh3.googleusercontent.com/z0gMa0aRAkLxjS-lVaSOO1Ygb48rttOcR5iRpgJPTM6_enkfeCuN37JWm_9qcHJaJw",
+      "/images/Airbnb.png",
     description: "A clone of Airbnb",
     gitHubUrl: "https://github.com/laurastromboni/airbnb-clone",
     projectUrl: "http://iron-airbnb.herokuapp.com/",
@@ -203,12 +203,12 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/abisummers"
       },
       {
-        name: "Abi Summers",
-        linkedInUrl: "https://www.linkedin.com/in/abisummers"
+        name: "Julie Ménard",
+        linkedInUrl: "https://www.linkedin.com/in/julie-m%C3%A9nard/"
       },
       {
-        name: "Abi Summers",
-        linkedInUrl: "https://www.linkedin.com/in/abisummers"
+        name: "Manon Salaun",
+        linkedInUrl: "https://www.linkedin.com/in/manonsalaun/"
       }
     ],
     screenshotUrl:
