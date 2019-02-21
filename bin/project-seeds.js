@@ -22,7 +22,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://www.thoughtco.com/thmb/fkB7M4niWhKwstAaCDgbu_vEBEY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Getty_word_pairs-245000011-585a0fff3df78ce2c30310ab-5bb3813bc9e77c0026039a6b.jpg",
+      "/images/Pairs.png",
     description:
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
@@ -146,7 +146,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://www.vu-du-web.com/wp-content/uploads/2014/02/1657806-1024x576.jpg",
+      "/images/Taptap.png",
     description: "A game based on dance dance revolution",
     gitHubUrl: "https://github.com/abisummers",
     projectUrl: "http://abisummers.com/project-one",
@@ -173,7 +173,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://github.githubassets.com/images/modules/explore/social.jpg",
+      "/images/Sharer.png",
     description:
       "A platform to allow ironhack students to share projects and ideas",
     gitHubUrl: "https://github.com/abisummers/project-two",
@@ -212,7 +212,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://wydden.com/wp-content/uploads/2018/10/EVENTBRITE_1-FINAL.png",
+      "/images/Recyclezmoi.png",
     description: "Know how to recycle your trash!",
     gitHubUrl: "https://github.com/abisummers/recycle-react",
     projectUrl: "http://www.recyclez-moi.co/",
@@ -242,7 +242,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://www.thegatewayonline.ca/wp-content/uploads/2017/01/Arts-Supplied-The-Founder-Movie-Review.jpg",
+      "/images/Isthisart.png",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/chloehd/IsThisArt",
@@ -270,7 +270,7 @@ const projects = [
       }
     ],
     screenshotUrl:
-      "https://dyw7ncnq1en5l.cloudfront.net/optim/news/71/71319/1_amazon.jpg",
+      "/images/SZNal.png",
     description: "Learn about seasonal foods!",
     gitHubUrl: "https://github.com/hwoldu/IronhackProject2",
     projectUrl: "https://szn-recipes.herokuapp.com/",
