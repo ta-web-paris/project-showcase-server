@@ -48,7 +48,9 @@ const projectSchema = new Schema(
       default: "notverified",
       algoliaIndex: true
     },
-    squad: { type: String, algoliaIndex: true }
+    squad: { type: String, algoliaIndex: true },
+    thumbnail: { type: String, algoliaIndex: true },
+    projectNumber: { type: Number, algoliaIndex: true }
   },
 
   {

@@ -21,8 +21,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/paul-abarnou-1b389080/"
       }
     ],
-    screenshotUrl:
-      "/images/Pairs.png",
+    screenshotUrl: "/images/Pairs.png",
     description:
       "Pairs allows people to rent an appartment for small periods on a regular basis (e.g few days per week during few months)",
     gitHubUrl: "https://github.com/PaulAbarnou37",
@@ -35,7 +34,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "notverified",
     searchId: "01",
-    squad: "#84"
+    squad: "#84",
+    thumbnail: "/images/Pairs_thumbnail.png",
+    projectNumber: 2
   },
   {
     name: "Guess Who Game",
@@ -58,7 +59,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "02",
-    squad: "#99"
+    squad: "#99",
+    thumbnail: "/images/Guesswho_thumbnail.png",
+    projectNumber: 1
   },
   {
     name: "O’Vino",
@@ -72,8 +75,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/geoffroy-baghdassarian/"
       }
     ],
-    screenshotUrl:
-      "/images/Ovino.png",
+    screenshotUrl: "/images/Ovino.png",
     description:
       "Food and wine pairing delivery application, w/ advice & social services.",
     gitHubUrl: "https://github.com/geoffroybag/ovino",
@@ -94,7 +96,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "03",
-    squad: "#99"
+    squad: "#99",
+    thumbnail: "/images/Ovino_thumbnail.png",
+    projectNumber: 2
   },
   {
     name: "Airbnb Clone",
@@ -112,8 +116,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/mathispnz/"
       }
     ],
-    screenshotUrl:
-      "/images/Airbnb.png",
+    screenshotUrl: "/images/Airbnb.png",
     description: "A clone of Airbnb",
     gitHubUrl: "https://github.com/laurastromboni/airbnb-clone",
     projectUrl: "http://iron-airbnb.herokuapp.com/",
@@ -135,7 +138,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "04",
-    squad: "#99"
+    squad: "#99",
+    thumbnail: "/images/Airbnb_thumbnail.png",
+    projectNumber: 3
   },
   {
     name: "Tap Tap Revolution",
@@ -145,8 +150,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/abisummers/"
       }
     ],
-    screenshotUrl:
-      "/images/Taptap.png",
+    screenshotUrl: "/images/Taptap.png",
     description: "A game based on dance dance revolution",
     gitHubUrl: "https://github.com/abisummers",
     projectUrl: "http://abisummers.com/project-one",
@@ -158,7 +162,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "05",
-    squad: "#83"
+    squad: "#83",
+    thumbnail: "/images/Taptap_thumbnail.png",
+    projectNumber: 1
   },
   {
     name: "Ironhack Sharer",
@@ -172,8 +178,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/ejaldorau/"
       }
     ],
-    screenshotUrl:
-      "/images/Sharer.png",
+    screenshotUrl: "/images/Sharer.png",
     description:
       "A platform to allow ironhack students to share projects and ideas",
     gitHubUrl: "https://github.com/abisummers/project-two",
@@ -193,7 +198,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "06",
-    squad: "#83"
+    squad: "#83",
+    thumbnail: "/images/Sharer_thumbnail.png",
+    projectNumber: 2
   },
   {
     name: "Recyclez-moi",
@@ -211,8 +218,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/manonsalaun/"
       }
     ],
-    screenshotUrl:
-      "/images/Recyclezmoi.png",
+    screenshotUrl: "/images/Recyclezmoi.png",
     description: "Know how to recycle your trash!",
     gitHubUrl: "https://github.com/abisummers/recycle-react",
     projectUrl: "http://www.recyclez-moi.co/",
@@ -231,7 +237,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "07",
-    squad: "#83"
+    squad: "#83",
+    thumbnail: "/images/Recyclezmoi_thumbnail.png",
+    projectNumber: 3
   },
   {
     name: "Is This Art?",
@@ -241,8 +249,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/chloehd/"
       }
     ],
-    screenshotUrl:
-      "/images/Isthisart.png",
+    screenshotUrl: "/images/Isthisart.png",
     description:
       "Github is platform for developpers to collaborate and share blahblah",
     gitHubUrl: "https://github.com/chloehd/IsThisArt",
@@ -255,7 +262,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "08",
-    squad: "#99"
+    squad: "#99",
+    thumbnail: "/images/Isthisart_thumbnail.png",
+    projectNumber: 1
   },
   {
     name: "SZNal",
@@ -269,8 +278,7 @@ const projects = [
         linkedInUrl: "https://www.linkedin.com/in/helen-woldu/"
       }
     ],
-    screenshotUrl:
-      "/images/SZNal.png",
+    screenshotUrl: "/images/SZNal.png",
     description: "Learn about seasonal foods!",
     gitHubUrl: "https://github.com/hwoldu/IronhackProject2",
     projectUrl: "https://szn-recipes.herokuapp.com/",
@@ -282,7 +290,9 @@ const projects = [
     bootcamp: "Web Dev Full Time",
     verified: "verified",
     searchId: "09",
-    squad: "#99"
+    squad: "#99",
+    thumbnail: "/images/SZNal_thumbnail.png",
+    projectNumber: 2
   }
 ];
 
