@@ -25,6 +25,32 @@ router.post("/projects", (req, res, next) => {
 
 // ------------- PROJECT DETAIL PAGE -----------------
 
+router.get("/creator-projects/:id", (req, res, next) => {
+  const { id } = req.params;
+  let creators;
+  Project.findOne({ searchId: { $eq: id } }).then(projectDoc => {
+    creators = projectDoc.creators;
+  });
+  Project.find()
+    .then(projectInfo => {
+      const onePerson = creators[0].name;
+      console.log(onePerson);
+
+      const final = [];
+
+      projectInfo.map(el => {
+        if (el.creators.map(ele => ele.name).includes(onePerson)) {
+          final.push(el);
+        }
+      });
+
+      res.json(final);
+    })
+    .catch(next);
+});
+
+//----------- more projects by this creator
+
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
 
@@ -34,7 +60,5 @@ router.get("/projects/:id", (req, res, next) => {
     })
     .catch(next);
 });
-
-//----------- more projects by this creator
 
 module.exports = router;
