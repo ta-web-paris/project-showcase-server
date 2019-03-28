@@ -30,7 +30,6 @@ router.get("/creator-projects/:id", (req, res, next) => {
   const { id } = req.params;
   let creators;
 
-  // Promise.then()
   Project.findOne({ searchId: { $eq: id } })
     .then(projectDoc => {
       creators = projectDoc.creators;
@@ -51,7 +50,7 @@ router.get("/creator-projects/:id", (req, res, next) => {
           res.json(final);
 
         })
-    )
+    ).catch(next)
     .catch(next)
 });
 
