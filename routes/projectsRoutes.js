@@ -23,33 +23,39 @@ router.post("/projects", (req, res, next) => {
     .catch(next);
 });
 
-// ------------- PROJECT DETAIL PAGE -----------------
+// ------------- more projects by this creator -----------------
+
 
 router.get("/creator-projects/:id", (req, res, next) => {
   const { id } = req.params;
   let creators;
-  Project.findOne({ searchId: { $eq: id } }).then(projectDoc => {
-    creators = projectDoc.creators;
-  });
-  Project.find()
-    .then(projectInfo => {
-      const onePerson = creators[0].name;
-      console.log(onePerson);
 
-      const final = [];
+  // Promise.then()
+  Project.findOne({ searchId: { $eq: id } })
+    .then(projectDoc => {
+      creators = projectDoc.creators;
+      return creators
+    }).then(
+      Project.find()
+        .then(projectInfo => {
+          const onePerson = creators[0].name;
+          console.log(onePerson);
 
-      projectInfo.map(el => {
-        if (el.creators.map(ele => ele.name).includes(onePerson)) {
-          final.push(el);
-        }
-      });
+          const final = [];
 
-      res.json(final);
-    })
-    .catch(next);
+          projectInfo.map(el => {
+            if (el.creators.map(ele => ele.name).includes(onePerson)) {
+              final.push(el);
+            }
+          });
+          res.json(final);
+
+        })
+    )
+    .catch(next)
 });
 
-//----------- more projects by this creator
+//----------- PROJECT DETAIL PAGE  ------------
 
 router.get("/projects/:id", (req, res, next) => {
   const { id } = req.params;
