@@ -1,0 +1,23 @@
+$lightblue : #00b4fe;
+$darkblue : #2d354c;
+$pink : rgba(236,58,53,.6);
+$darkgrey : rgba(45,53,76,.4);
+$lightgrey : #f8f8f8;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lightgrey;
+}
+
+ul{
+  padding-inline-start: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+button:focus, input:focus{
+  outline: none;
+}
