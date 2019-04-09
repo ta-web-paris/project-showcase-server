@@ -51,4 +51,28 @@ router.put("/projects/edit/:id", (req, res, next) => {
     .catch(next);
 });
 
+router.get("/projects/delete/:id", (req, res, next) => {
+  const { id } = req.params;
+  const { ...fields } = req.body;
+
+  Project.findOne(id)
+    .then(projectDoc => {
+      console.log(projectDoc);
+      res.json(projectDoc);
+    })
+    .catch(next);
+});
+
+// router.post('/movies/:id/delete', function(req, res, next) {
+//   Movie.findOne({ _id: req.params.id }, (err, theMovie) => {
+//     if (err) { return next(err); }
+
+//     theMovie.remove((err) => {
+//       if (err) { return next(err); }
+
+//       res.redirect('/movies');
+//     });
+//   });
+// });
+
 module.exports = router;
