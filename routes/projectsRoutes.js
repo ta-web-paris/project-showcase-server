@@ -26,33 +26,33 @@ router.post("/projects", (req, res, next) => {
 // ------------- more projects by this creator -----------------
 
 
-router.get("/creator-projects/:id", (req, res, next) => {
-  const { id } = req.params;
-  let creators;
+// router.get("/creator-projects/:id", (req, res, next) => {
+//   const { id } = req.params;
+//   let creators;
 
-  Project.findOne({ searchId: { $eq: id } })
-    .then(projectDoc => {
-      creators = projectDoc.creators;
-      return creators
-    }).then(
-      Project.find()
-        .then(projectInfo => {
-          const onePerson = creators[0].name;
-          console.log(onePerson);
+//   Project.findOne({ searchId: { $eq: id } })
+//     .then(projectDoc => {
+//       creators = projectDoc.creators;
+//       return creators
+//     }).then(
+//       Project.find()
+//         .then(projectInfo => {
+//           const onePerson = creators[0].name;
+//           console.log(onePerson);
 
-          const final = [];
+//           const final = [];
 
-          projectInfo.map(el => {
-            if (el.creators.map(ele => ele.name).includes(onePerson)) {
-              final.push(el);
-            }
-          });
-          res.json(final);
+//           projectInfo.map(el => {
+//             if (el.creators.map(ele => ele.name).includes(onePerson)) {
+//               final.push(el);
+//             }
+//           });
+//           res.json(final);
 
-        })
-    ).catch(next)
-    .catch(next)
-});
+//         })
+//     ).catch(next)
+//     .catch(next)
+// });
 
 //----------- PROJECT DETAIL PAGE  ------------
 
