@@ -61,7 +61,7 @@ const projectSchema = new Schema(
 projectSchema.plugin(mongoolia, {
   appId: process.env.ALGOLIA_APP_ID,
   apiKey: process.env.ALGOLIA_ADMIN_KEY,
-  indexName: "search_data"
+  indexName: process.env.ALGOLIA_DATA
 });
 
 const Project = mongoose.model("Project", projectSchema);
