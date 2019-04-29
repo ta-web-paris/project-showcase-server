@@ -30,9 +30,10 @@ router.delete("/projects/:id", (req, res, next) => {
 
 router.get("/projects/edit/:id", (req, res, next) => {
   const { id } = req.params;
-
-  Project.findById(id)
+  Project.findOne({ searchId: { $eq: id } })
     .then(projectDoc => {
+      console.log(projectDoc);
+
       res.json(projectDoc);
     })
     .catch(next);
