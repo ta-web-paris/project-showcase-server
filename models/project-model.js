@@ -15,7 +15,7 @@ const projectSchema = new Schema(
     projectUrl: { type: String, required: true, algoliaIndex: true },
     tools: { type: Array, algoliaIndex: true },
     likes: { type: Number, algoliaIndex: true },
-    linkedInUrl: { type: String, algoliaIndex: true },
+    linkedInUrl: { type: Array, algoliaIndex: true },
     projectCredentials: { type: Array, algoliaIndex: true },
     bootcamp: {
       type: String,
@@ -43,9 +43,8 @@ const projectSchema = new Schema(
       algoliaIndex: true
     },
     verified: {
-      type: String,
-      enum: ["verified", "notverified"],
-      default: "notverified",
+      type: Boolean,
+      default: false,
       algoliaIndex: true
     },
     squad: { type: String, algoliaIndex: true },

@@ -6,13 +6,13 @@ const Project = require("../models/project-model");
 //------------ DISPLAY PROJECTS -----------------
 
 router.get("/verified", (req, res, next) => {
-  Project.find({ verified: { $eq: "verified" } })
+  Project.find({ verified: { $eq: true } })
     .then(projectArr => res.json(projectArr))
     .catch(next);
 });
 
 router.get("/notverified", (req, res, next) => {
-  Project.find({ verified: { $eq: "notverified" } })
+  Project.find({ verified: { $eq: false } })
     .then(projectArr => res.json(projectArr))
     .catch(next);
 });
